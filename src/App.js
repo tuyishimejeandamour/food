@@ -1,15 +1,17 @@
 
 import './App.css';
-import  ExpenseItem from './components/expense/expense'
 import Header from './components/header/Header';
+import Home from './pages/home';
 function App() {
   return (
     <div className="App">
+      <div className="head">
        <Header />
-       <ExpenseItem></ExpenseItem>
-       <ExpenseItem></ExpenseItem>
-       <ExpenseItem></ExpenseItem>
-       <ExpenseItem></ExpenseItem>
+       </div>
+       <div className="body-div">
+       <Home />
+       </div>
+       
     </div>
   );
 }

@@ -1,6 +1,10 @@
 
 .main_header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
     background-color:#320B3D;
+    background: linear-gradient(to right, #320B3D, #63157A);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
