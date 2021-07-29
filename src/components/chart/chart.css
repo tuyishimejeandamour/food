@@ -27,7 +27,7 @@
         color: rgb(69, 57, 77);
 }
 .bars div{
-    background: white;
+    background: rgb(248, 243, 255);
     width: 30px;
     margin-right: auto;
     margin-left: auto;
