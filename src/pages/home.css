@@ -7,6 +7,7 @@
 .left-container{
     display: flex;
     width: 60%;
+    padding-bottom: 30px;
     
 }
 .left-container .space{
@@ -74,9 +75,10 @@
         width: 0 !important;
     }
     .addForm{
-        background: linear-gradient(45deg, rgb(230, 230, 230) 23%, rgb(248, 245, 255) 25%, rgb(248, 243, 255) 75%, rgb(230, 234, 230) 75%, rgb(230, 230, 230));
+        background: transparent;
+        /* background: linear-gradient(45deg, rgb(230, 230, 230) 23%, rgb(248, 245, 255) 25%, rgb(248, 243, 255) 75%, rgb(230, 234, 230) 75%, rgb(230, 230, 230)); */
     }
-    .right-margin{
+    .right-margin.hide{
       visibility: hidden;
     }
 }

@@ -10,7 +10,6 @@ function DateDisplay({ spendings, date }) {
                         <div className="line"></div>
                         <div className="date-display">
                             <span>{
-                    
                              new Date(Date.now()).toLocaleDateString() === new Date(date).toLocaleDateString()?'To-day':new Date(date).toLocaleDateString()
                             }
                             </span>
