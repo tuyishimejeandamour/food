@@ -1,0 +1,37 @@
+form{
+    height: 100%;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 5px #dde;
+}
+.form-title{
+    height: 56px;
+    width: 100%;
+    display: flex;
+    color: #320B3D;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.form-bottom{
+    height: 60px;
+    width: 100%;
+    background-color: burlywood;
+}
+
+.form-body{
+    flex:1;
+    width: 100%;
+}
+
+.input-div{
+    width: 100%;
+    height: 50px;
+    background: #320B3D;
+}

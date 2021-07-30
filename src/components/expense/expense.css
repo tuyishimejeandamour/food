@@ -68,3 +68,10 @@
     font-size: 11px;
     color: rgb(182, 182, 189);
 }
+
+@media(max-width:950px){
+    .expense-container{
+        width: calc(100% - 24px);
+        margin: 0 12px 0 12px;
+    }
+}

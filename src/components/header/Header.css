@@ -70,3 +70,9 @@
     font-size: 21px;
 
 }
+
+@media ( max-width: 950px ) {
+    .logo{
+        justify-content: flex-start;
+    }
+}
