@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import AddExpense from '../components/addexpense/AddExpense'
-import Chart from '../components/chart/chart'
+import ChartExpense from '../components/chart/chartExpense'
 import DateDisplay from '../components/date-display/DateDisplay'
 import Menu from '../components/menu/Menu'
 import NoExpense from '../components/noExpense/noExpense'
@@ -76,7 +76,7 @@ function Home({ spendings, onNewExpense }) {
                             <Menu showModal={shownewExpenseModal} />
                         </div>
                         <div className="chart">
-                            <Chart />
+                            <ChartExpense spendings={spendings} />
                         </div>
                         <div className="summary">
                             <Margin margin="15px">

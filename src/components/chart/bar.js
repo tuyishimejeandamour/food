@@ -6,7 +6,7 @@ function Bar(props) {
         <div style={{
             height:props.height,
             background:props.background,
-        }}>
+        }} className="bar">
 
         </div>
     )

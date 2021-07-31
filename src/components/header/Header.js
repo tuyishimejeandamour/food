@@ -1,6 +1,6 @@
 
 import "./Header.css";
-import header from '../../logo.svg'
+import header from '../../assets/expense.svg'
 function Header() {
   return (
     <div className="main_header">

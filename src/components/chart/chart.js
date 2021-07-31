@@ -3,31 +3,31 @@ import Margin from '../shared/margin'
 import Bar from './bar'
 import './chart.css'
 
-function Chart() {
-    return(
-        <Margin margin="15px">
-           <div className="chart-container">
-               <div className="bars">
-                 <Bar height="12%"  />
-                 <Bar height="32%" />
-                 <Bar height="6%" />
-                 <Bar height="22%" />
-                 <Bar height="44%" />
-                 <Bar height="64%" />
-                 <Bar height="74%" />
-               </div>
-               <div className="bars-names">
-                 <FlexCenter className="bars-names-title">mo</FlexCenter>
-                 <FlexCenter className="bars-names-title">tue</FlexCenter>
-                 <FlexCenter className="bars-names-title">we</FlexCenter>
-                 <FlexCenter className="bars-names-title">th</FlexCenter>
-                 <FlexCenter className="bars-names-title">fi</FlexCenter>
-                 <FlexCenter className="bars-names-title">sat</FlexCenter>
-                 <FlexCenter className="bars-names-title">su</FlexCenter>
-               </div>
-            </div> 
-        </Margin>
-    )
+function Chart(props) {
+  const days = ['mon','tue','wed','thu','fri','sat','sun'];
+  const keys =[1,2,3,4,5,6,7];
+  const calculatepercentage = ()=>{
+    if(props.maxvalue === 0) return;
+    return keys.map((key)=>{
+      
+      return ( <Bar height={(props.value.get(key)/props.maxvalue)*100+"%"} />)
+    })
+  }
+  return (
+
+    <Margin margin="15px">
+      <div className="chart-container">
+        <div className="bars">
+          {calculatepercentage()}
+        </div>
+        <div className="bars-names">
+          {days.map((day)=>{
+           return ( <FlexCenter className="bars-names-title">{day}</FlexCenter>)
+          })}
+        </div>
+      </div>
+    </Margin>
+  )
 }
 
 export default Chart
