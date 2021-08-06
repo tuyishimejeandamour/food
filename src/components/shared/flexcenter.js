@@ -5,6 +5,7 @@ function FlexCenter(props) {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            height:'100%'
         }} 
         className={props.className}
         >

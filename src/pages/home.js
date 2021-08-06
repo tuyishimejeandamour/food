@@ -7,6 +7,8 @@ import NoExpense from '../components/noExpense/noExpense'
 import Margin from '../components/shared/margin'
 import Summary from '../components/summary/summary'
 import './home.css'
+import Modal from '../components/shared/modal/modal'
+import FlexCenter from '../components/shared/flexcenter'
 function Home({ spendings, onNewExpense }) {
     let date = new Set();
     let dates = [];
@@ -90,6 +92,13 @@ function Home({ spendings, onNewExpense }) {
 
                 </div>
             </div>
+        <Modal>
+            <Margin margin="20px">
+            <FlexCenter>
+            modal
+            </FlexCenter>
+            </Margin>
+        </Modal>
         </div>
     )
 }

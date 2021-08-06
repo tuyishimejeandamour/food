@@ -8,9 +8,9 @@ function Chart(props) {
   const keys =[1,2,3,4,5,6,7];
   const calculatepercentage = ()=>{
     if(props.maxvalue === 0) return;
-    return keys.map((key)=>{
+    return keys.map((key,i)=>{
       
-      return ( <Bar height={(props.value.get(key)/props.maxvalue)*100+"%"} />)
+      return ( <Bar key={i+"bar"} height={(props.value.get(key)/props.maxvalue)*100+"%"} />)
     })
   }
   return (
@@ -21,8 +21,8 @@ function Chart(props) {
           {calculatepercentage()}
         </div>
         <div className="bars-names">
-          {days.map((day)=>{
-           return ( <FlexCenter className="bars-names-title">{day}</FlexCenter>)
+          {days.map((day,i)=>{
+           return ( <FlexCenter key={i+"bar-name"} className="bars-names-title">{day}</FlexCenter>)
           })}
         </div>
       </div>
