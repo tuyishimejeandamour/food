@@ -2,11 +2,14 @@ import './bar.css'
 
 function Bar(props) {
     
+    const handleclick = ()=>{
+        props.onclick(props.spendings)
+    }
     return(
         <div style={{
             height:props.height,
             background:props.background,
-        }} className="bar">
+        }} onClick={handleclick} className="bar">
 
         </div>
     )

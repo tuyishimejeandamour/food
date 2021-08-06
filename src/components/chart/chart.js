@@ -6,11 +6,18 @@ import './chart.css'
 function Chart(props) {
   const days = ['mon','tue','wed','thu','fri','sat','sun'];
   const keys =[1,2,3,4,5,6,7];
+
+  const handleBarClick =(dayspendingdata)=>{
+     props.onclick(dayspendingdata)
+  }
+
   const calculatepercentage = ()=>{
     if(props.maxvalue === 0) return;
     return keys.map((key,i)=>{
-      
-      return ( <Bar key={i+"bar"} height={(props.value.get(key)/props.maxvalue)*100+"%"} />)
+       const maxamount = props.value.get(key) ? props.value.get(key)["amount"]:0;
+       const spendings = props.value.get(key) ? props.value.get(key)["spendings"]:[];
+       
+      return ( <Bar key={i+"bar"} onclick={handleBarClick} spendings={{spendings,day:key}} height={maxamount/props.maxvalue*100+"%"} />)
     })
   }
   return (

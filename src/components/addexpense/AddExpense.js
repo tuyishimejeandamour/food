@@ -68,7 +68,7 @@ function AddExpense(props) {
                     </div>
                     <div className="form-bottom">
                       <button type="submit" className="save">save</button>
-                      <button type="button" className="cancel" onClick={handleOnHide}>cancel</button>
+                      <button type="button" className="cancel" onClick={handleOnHide}>close</button>
                     </div>
                     </Margin>
                 </div>

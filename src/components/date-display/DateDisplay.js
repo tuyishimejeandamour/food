@@ -3,7 +3,7 @@ import './DateDisplay.css'
 import ExpenseItem from '../expense/expense'
 function DateDisplay({ spendings, date }) {
     return (
-        <div>
+        <>
             <div className="date-container">
                 <div className="date-div">
                     <div className="dash-lin">
@@ -19,7 +19,10 @@ function DateDisplay({ spendings, date }) {
                 <div className="items">
                     {spendings.map((spending, i) => {
                         if (spending.date.toLocaleDateString() === new Date(date).toLocaleDateString()) {
-                            return (<ExpenseItem key={spending.id} spending={spending}></ExpenseItem>)
+                            return (
+                            <ExpenseItem key={spending.id} spending={spending}></ExpenseItem>
+                            
+                            )
 
                         }
                         return undefined;
@@ -27,7 +30,7 @@ function DateDisplay({ spendings, date }) {
                     })}
                 </div>
             </div>
-        </div>
+        </>
     )
 
 }

@@ -9,11 +9,14 @@ import Summary from '../components/summary/summary'
 import './home.css'
 import Modal from '../components/shared/modal/modal'
 import FlexCenter from '../components/shared/flexcenter'
+import WeekDayDisplay from '../components/weekDayDisplay/dayDisplay'
 function Home({ spendings, onNewExpense }) {
     let date = new Set();
     let dates = [];
     const [showModal, setshowModal] = useState(false)
     const [ishiden, setishiden] = useState(false)
+    const [ismodalHiden, setismodalHiden] = useState(true)
+    const [daySpending, setdaySpending] = useState(Object.create(null))
     spendings.map((spending) => {
         if (!date.has(spending.date.toLocaleDateString())) {
             date.add(spending.date.toLocaleDateString())
@@ -53,6 +56,14 @@ function Home({ spendings, onNewExpense }) {
         )
         setshowModal(!showModal)
     }
+    const handleBarClick = (dayspendingdata) => {
+
+        setdaySpending(dayspendingdata)
+        handlemodalclode()
+    }
+    const handlemodalclode = () => {
+        setismodalHiden(!ismodalHiden)
+    }
     return (
         <div className="home">
             <div className="home-container">
@@ -78,7 +89,7 @@ function Home({ spendings, onNewExpense }) {
                             <Menu showModal={shownewExpenseModal} />
                         </div>
                         <div className="chart">
-                            <ChartExpense spendings={spendings} />
+                            <ChartExpense onclick={handleBarClick} spendings={spendings} />
                         </div>
                         <div className="summary">
                             <Margin margin="15px">
@@ -92,13 +103,16 @@ function Home({ spendings, onNewExpense }) {
 
                 </div>
             </div>
-        <Modal>
-            <Margin margin="20px">
-            <FlexCenter>
-            modal
-            </FlexCenter>
-            </Margin>
-        </Modal>
+            {
+                !ismodalHiden &&
+                <Modal display={ismodalHiden ? "none" : 'block'}>
+                    <Margin margin="6%">
+                        <FlexCenter>
+                            <WeekDayDisplay close={handlemodalclode} spendings={daySpending.spendings} date={daySpending.day} />
+                        </FlexCenter>
+                    </Margin>
+                </Modal>
+            }
         </div>
     )
 }
