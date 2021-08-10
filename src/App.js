@@ -1,26 +1,40 @@
+import React, { useState, useEffect } from 'react';
 
-import { useState } from 'react';
-import './App.css';
-import Footer from './components/footer/footer';
-import Header from './components/header/Header';
-import Home from './pages/home';
+import Login from './components/Login/Login';
+import Home from './components/Home/Home';
+import MainHeader from './components/MainHeader/MainHeader';
+
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const [spendings, setSpendings] = useState([])
+  useEffect(() => {
+    const storedUserLoggedInInformation = localStorage.getItem('isLoggedIn');
 
-  const handleNewExpense = (expense)=>{
-    setSpendings([ ...spendings,expense]);
-  }
+    if (storedUserLoggedInInformation === '1') {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const loginHandler = (email, password) => {
+    // We should of course check email and password
+    // But it's just a dummy/ demo anyways
+    localStorage.setItem('isLoggedIn', '1');
+    setIsLoggedIn(true);
+  };
+
+  const logoutHandler = () => {
+    localStorage.removeItem('isLoggedIn');
+    setIsLoggedIn(false);
+  };
+
   return (
-    <div className="App">
-      <div className="head">
-       <Header />
-       </div>
-       <div className="body-div">
-       <Home spendings = {spendings} onNewExpense={handleNewExpense} />
-       </div>
-       <Footer />
-    </div>
+    <React.Fragment>
+      <MainHeader isAuthenticated={isLoggedIn} onLogout={logoutHandler} />
+      <main>
+        {!isLoggedIn && <Login onLogin={loginHandler} />}
+        {isLoggedIn && <Home onLogout={logoutHandler} />}
+      </main>
+    </React.Fragment>
   );
 }
 
