@@ -6,12 +6,22 @@ const Navigation = (props) => {
   return (
     <nav className={classes.nav}>
       <ul>
+      {props.isLoggedIn && (
         <li>
-          <div className={classes.addcart}>cart</div>
+          <div className={classes.addcart}>
+            <div className={classes.addCartMessage}>
+              {/* <img src={} alt="cart" /> */}
+              <span>cart</span>
+            </div>
+            <div className={classes.addCartButton}>
+              <button>12</button>
+            </div>
+            </div>
         </li>
+      )}
         {props.isLoggedIn && (
           <li>
-            <button onClick={props.onLogout}>J</button>
+            <button className={classes.userHeader} onClick={props.onLogout}>J</button>
           </li>
         )}
       </ul>

@@ -25,13 +25,13 @@ function App() {
   };
 
   return (
-    <React.Fragment>
+    <div className ="app">
       <MainHeader isAuthenticated={isLoggedIn} onLogout={logoutHandler} />
       <main>
         {!isLoggedIn && <Login onLogin={loginHandler} />}
         {isLoggedIn && <Home onLogout={logoutHandler} />}
       </main>
-    </React.Fragment>
+    </div>
   );
 }
 

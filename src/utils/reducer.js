@@ -21,7 +21,7 @@ export const  password =  (state, { type, value}) => {
     switch (type) {
   
     case 'password':
-      return { ...state, value }
+      return { ...state, value ,isValid:state.value.trim().length>6}
     case 'passwordvalid':
         return {...state,isValid:state.value.trim().length>6}
     default:

@@ -4,6 +4,7 @@ import Card from '../../UI/Card/Card';
 import classes from './Login.module.css';
 import Button from '../../UI/Button/Button';
 import {initialState,reducer,password} from '../../../utils/reducer';
+import Form from '../../UI/form/Form';
 
 const Login = (props) => {
   const [formIsValid, setFormIsValid] = useState(false);
@@ -15,7 +16,7 @@ const Login = (props) => {
       setFormIsValid(
         stateemail.isValid && passwordState.isValid
       );
-    }, 500);
+    }, 100);
     
     
     return()=>{
@@ -46,8 +47,7 @@ const Login = (props) => {
   };
 
   return (
-    <Card className={classes.login}>
-      <form onSubmit={submitHandler}>
+    <Form onSubmit={submitHandler} className={classes.login}>
         <div
           className={`${classes.control} ${
             stateemail.isvalid === false ? classes.invalid : ''
@@ -81,8 +81,7 @@ const Login = (props) => {
             Login
           </Button>
         </div>
-      </form>
-    </Card>
+    </Form>
   );
 };
 
