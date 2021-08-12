@@ -1,8 +1,8 @@
 import React, { useState, useEffect} from 'react';
 
-import Login from './components/pages/Login/Login';
 import Home from './components/pages/Home/Home';
 import MainHeader from './components/layout/MainHeader/MainHeader';
+import LoginPage from './components/pages/Login/Login';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -28,7 +28,7 @@ function App() {
     <div className ="app">
       <MainHeader isAuthenticated={isLoggedIn} onLogout={logoutHandler} />
       <main>
-        {!isLoggedIn && <Login onLogin={loginHandler} />}
+        {!isLoggedIn && <LoginPage onLogin={loginHandler} />}
         {isLoggedIn && <Home onLogout={logoutHandler} />}
       </main>
     </div>
