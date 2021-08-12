@@ -24,3 +24,9 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+@media(max-width:956px){
+  main{
+    padding: 13px 6px 6px 6px;
+  }
+}

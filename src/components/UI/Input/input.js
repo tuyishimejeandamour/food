@@ -12,7 +12,7 @@ const Input = (props)=>{
      return(
         <div
         className={`${classes.control} ${
-          props.isvalid === false ? classes.invalid : ''
+          props.isValid === false ? classes.invalid : ''
         }`}
       >
         <label htmlFor={props.label}>{props.label}</label>

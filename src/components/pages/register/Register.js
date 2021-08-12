@@ -1,6 +1,6 @@
 import Flex from '../../layout/flex/flexcontainer';
 import LoginComponent from '../../component/loginForm/login';
-import classes from './Login.module.css'
+import classes from './Register.module.css'
 const LoginPage = (props) => {
   const loginHandler = ()=>{
     props.onLogin()

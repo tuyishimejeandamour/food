@@ -11,9 +11,9 @@
   }
   
   .control label {
-    font-weight: bold;
+    font-weight: 500;
     flex: 1;
-    color: #464646;
+    color: whitesmoke;
     margin-bottom: 0.5rem;
   }
   
@@ -21,27 +21,31 @@
     flex: 3;
     font: inherit;
     padding: 0.35rem 0.35rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid rgb(175, 175, 175);
+    color: white;
+    
   }
   
   .control input:focus {
+    transition: .3s ease-in-out;
     outline: none;
-    border-color: #4f005f;
-    background: #f6dbfc;
+    border-bottom: 1px solid #ffffff;
   }
   
-  .control.invalid input {
+  /* .control.invalid input {
     border-color: red;
     background: #fbdada;
-  }
+  } */
   
 
-  
+/*   
   @media (min-width: 768px) {
     .control {
       align-items: center;
       flex-direction: row;
     }
   
-  }
+  } */
