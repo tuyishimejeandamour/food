@@ -12,7 +12,7 @@ const Input = (props)=>{
      return(
         <div
         className={`${classes.control} ${
-          props.isValid === false ? classes.invalid : ''
+          props.isValid === true ? classes.invalid : ''
         }`}
       >
         <label htmlFor={props.label}>{props.label}</label>
@@ -25,6 +25,11 @@ const Input = (props)=>{
           onBlur={burHandler}
 
         />
+        {props.isValid && (
+        <div className={classes.error} style={{bottom:props.errorMessage?props.errorMessage.length>20?'-21px':'2px':'2px'}}>
+          <span>{props.errorMessage?props.errorMessage:'value is invalid'}</span>
+        </div>
+        )}
       </div>
      )   
 

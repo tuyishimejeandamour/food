@@ -1,49 +1,39 @@
-import React, { useState, useEffect, useReducer } from 'react';
+import React from 'react';
 
 import classes from './login.module.css';
 import Button from '../../UI/Button/Button';
-import { initialState, reducer, password } from '../../../utils/reducer';
 import Form from '../../UI/form/Form';
 import Input from '../../UI/Input/input';
-
+import { validateEmail, validatePassword } from '../../../utils/validations';
+import useInput from '../../../hooks/useInput';
 const LoginComponent = (props) => {
-    const [formIsValid, setFormIsValid] = useState(false);
-    const [stateemail, dispatchem] = useReducer(reducer, initialState)
-    const [passwordState, dispatchpass] = useReducer(password, initialState)
+    let formIsValid = false;
+    const { value: email,
+        isValid:emailIsValid,
+        hasError: emailHasError,
+        reset: emailReset,
+        valueChangedHandler: emailChangeHandler,
+        burHandler: onEmailBurHandler
+    } = useInput(validateEmail)
 
-    useEffect(() => {
-        const handle = setTimeout(() => {
-            setFormIsValid(
-                stateemail.isValid && passwordState.isValid
-            );
-        }, 100);
-
-
-        return () => {
-            clearTimeout(handle)
-        }
-
-    }, [stateemail, passwordState])
-
-    const emailChangeHandler = (event) => {
-        dispatchem({ type: 'email', value: event.target.value })
-    };
-
-    const passwordChangeHandler = (event) => {
-        dispatchpass({ type: 'password', value: event.target.value });
-    };
-
-    const validateEmailHandler = () => {
-        dispatchem({ type: 'emailvalid' })
-    };
-
-    const validatePasswordHandler = () => {
-        dispatchpass({ type: 'passwordvalid' });
-    };
+    const { value: password,
+        hasError: passwordHasError,
+        isValid:passwordIsValid,
+        reset: passwordReset,
+        valueChangedHandler: passwordChangeHandler,
+        burHandler: onPasswordBurHandler
+    } = useInput(validatePassword)
+   
+    if(emailIsValid && passwordIsValid ){
+        formIsValid = true
+    }
+   
 
     const submitHandler = (event) => {
         event.preventDefault();
-        props.onLogin(stateemail.value, passwordState.value);
+        emailReset()
+        passwordReset()
+        props.onLogin(email, password);
     };
 
     return (
@@ -51,8 +41,8 @@ const LoginComponent = (props) => {
              <div className={classes.loginheader}>
                login
              </div>
-            <Input isValid={stateemail.isValid} id='email' label='Email' type='email' value={stateemail.value} onChange={emailChangeHandler} onBlur={validateEmailHandler} />
-            <Input isValid={passwordState.isValid} id='password' label='password' type='password' value={passwordState.value} onChange={passwordChangeHandler} onBlur={validatePasswordHandler} />
+            <Input isValid={emailHasError} errorMessage="email is invalid" id='email' label='Email' type='email' value={email} onChange={emailChangeHandler} onBlur={onEmailBurHandler} />
+            <Input isValid={passwordHasError} errorMessage="password is invalid" id='password' label='password' type='password' value={password} onChange={passwordChangeHandler} onBlur={onPasswordBurHandler} />
 
             <div className={classes.actions}>
                 <Button type="submit" className={classes.btn} disabled={!formIsValid}>

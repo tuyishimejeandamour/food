@@ -2,6 +2,7 @@
     margin: 1rem 0;
     display: flex;
     align-items: stretch;
+    position: relative;
     flex-direction: column;
   }
   
@@ -11,6 +12,7 @@
   }
   
   .control label {
+    font-size: 12px;
     font-weight: 500;
     flex: 1;
     color: whitesmoke;
@@ -28,19 +30,23 @@
     color: white;
     
   }
-  
+
   .control input:focus {
     transition: .3s ease-in-out;
     outline: none;
     border-bottom: 1px solid #ffffff;
   }
   
-  /* .control.invalid input {
-    border-color: red;
-    background: #fbdada;
-  } */
+  .control.invalid input {
+    border-color: rgb(190, 70, 70);
+  }
   
-
+ .error{
+   color: tomato;
+   position: absolute;
+   bottom: 0px;
+   right: 2px;
+ }
 /*   
   @media (min-width: 768px) {
     .control {

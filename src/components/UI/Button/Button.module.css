@@ -28,4 +28,5 @@ button:active:disabled {
   border-color: #ccc;
   color: #666666;
   cursor: not-allowed;
+  box-shadow: none;
 }

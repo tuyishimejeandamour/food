@@ -1,0 +1,16 @@
+.register {
+    width: 100%;
+    max-width: 40rem;
+  }
+  
+  .actions {
+    text-align: center;
+    margin-top: 65px;
+    margin-bottom: 40px;
+  }
+  
+  .registerheader{
+    margin: 10px auto 31px auto;
+    color: white;
+    font-size: 41px;
+  }

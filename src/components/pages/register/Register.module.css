@@ -1,10 +1,11 @@
-.login {
+.register {
   width: 100%;
-  max-width: 40rem;
+ justify-content: center;
+ align-items: center;
 }
 
 @media(max-width:956px){
-  .logindiv{
+  .register{
     width: 100% !important;
     justify-content: center;
   }

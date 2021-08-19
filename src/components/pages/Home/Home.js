@@ -1,11 +1,18 @@
 import React from 'react';
 import Flex from '../../layout/flex/flexcontainer';
-import LoginPage from '../Login/Login';
+import Composition from '../../component/composition/composition';
+
 
 const Home = (props) => {
   return (
     <Flex>
-      <LoginPage onLogin={()=>props.onLogin()} />
+      <Flex> 
+      </Flex>
+      <Flex> 
+      </Flex>
+      <Flex>
+     <Composition />
+      </Flex>
     </Flex>
   );
 };

@@ -1,4 +1,7 @@
 
+.form{
+    margin-right: 20px;
+}
 .borderline{
     border: 1px solid rgba(145, 145, 146, 0.438);
     border-radius: 9px;
@@ -6,6 +9,10 @@
 
 @media(max-width:956px){
     .borderline{
-        padding: 20px !important;
+        padding: 11px !important;
+        border: none;
+    }
+    .form {
+        margin-right: inherit;
     }
 }
