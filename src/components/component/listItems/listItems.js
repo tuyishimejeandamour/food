@@ -9,16 +9,13 @@ const ListITems = () => {
                    return( 
                    <List key={item}>
                         <div className={classes.name}>
-                            <span></span>
+                            <span>-</span>
                             name
                             </div>
-                        <div className={classes.content}>
-                            content<br/>
-                            content<br/>
-                            content<br/>
-                            content<br/>
+                        {/* <div className={classes.content}>
+                            content
                         </div>
-                        <div className={classes.action}>action</div>
+                        <div className={classes.action}>action</div> */}
                     </List>
                    )
                 })

@@ -1,0 +1,23 @@
+.menuContainer{
+    width: 100%;
+    height: 100%;
+    background: #434748;
+    padding: 20px;
+}
+.title{
+    color: white;
+    font-size: inherit;
+    font-weight: 600;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 10px;
+}
+.main{
+    width: 100%;
+    height: calc(100% - 60px);
+}
+
+.titleflex{
+ justify-content: center;
+}

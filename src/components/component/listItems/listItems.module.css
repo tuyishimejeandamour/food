@@ -1,11 +1,20 @@
 
 .name{
   font-size: 12px;
+  display: flex;
+  align-items: center;
   
 }
+.name span{
+  margin-right: 3px;
+  display: block;
+  font-size: 26px;
+}
 .content{
-
+  display: flex;
+  align-items: center;
 }
 .action{
-
+  display: flex;
+  align-items: center;
 }
