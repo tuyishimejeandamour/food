@@ -1,11 +1,13 @@
 
 import classes from './item.module.css'
 import image from '../../../assets/logo.png'
+import {useHistory} from 'react-router-dom'
 const Item = (props)=>{
+    const history = useHistory();
     return(
         <div className={classes.itemContainer}>
             <div className={classes.imageContainer}>
-                <div className={classes.image}>
+                <div className={classes.image} onClick={()=>history.push(`/product/${1}`)}>
                     <img src={image} alt="item" />
                 </div>
             </div>

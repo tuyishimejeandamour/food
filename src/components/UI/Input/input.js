@@ -26,7 +26,7 @@ const Input = (props)=>{
 
         />
         {props.isValid && (
-        <div className={classes.error} style={{bottom:props.errorMessage?props.errorMessage.length>20?'-21px':'2px':'2px'}}>
+        <div className={classes.error} style={{bottom:props.errorMessage?props.errorMessage.length>30?'-21px':'2px':'2px'}}>
           <span>{props.errorMessage?props.errorMessage:'value is invalid'}</span>
         </div>
         )}

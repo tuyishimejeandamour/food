@@ -1,0 +1,19 @@
+.flexContainer{
+    width: 23%;
+    padding: 20px 0px;
+}
+.menucontainer{
+    padding: 20px;
+    width: 37%;
+}
+
+.product{
+    width: 50%;
+}
+
+@media(max-width:950px){
+    .all{
+      width: 100%;
+      padding: 5px;
+    }
+}

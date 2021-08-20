@@ -5,10 +5,12 @@ import MainHeader from './components/layout/MainHeader/MainHeader';
 import LoginPage from './components/pages/Login/Login';
 import RegisterPage from './components/pages/register/Register';
 import {Route,Redirect,Switch} from 'react-router-dom'
+import ProductView from './components/pages/productView/productView';
+import { useHistory } from 'react-router-dom'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+  const history = useHistory()
   useEffect(() => {
     const can = localStorage.getItem('LOGIN')
    if (can === '1') {
@@ -19,11 +21,13 @@ function App() {
   const loginHandler = (email, password) => {
     localStorage.setItem('LOGIN','1');
     setIsLoggedIn(true);
+    history.push('/welcome')
   };
 
   const logoutHandler = () => {
     localStorage.removeItem('LOGIN')
     setIsLoggedIn(false);
+    history.push('/login')
   };
 
   return (
@@ -42,6 +46,9 @@ function App() {
       </Route>
       <Route path="/register">
       <RegisterPage />
+      </Route>
+      <Route path="/product/:productId">
+      <ProductView />
       </Route>
       </Switch>
       </main>
