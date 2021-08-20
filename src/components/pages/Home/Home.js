@@ -1,7 +1,7 @@
 import React from 'react';
 import Flex from '../../layout/flex/flexcontainer';
 import Composition from '../../component/composition/composition';
-
+import ListITems from '../../component/listItems/listItems';
 
 const Home = (props) => {
   return (
@@ -11,7 +11,9 @@ const Home = (props) => {
       <Flex> 
       </Flex>
       <Flex>
-     <Composition />
+     <Composition>
+       <ListITems></ListITems>
+     </Composition>
       </Flex>
     </Flex>
   );

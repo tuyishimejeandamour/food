@@ -29,6 +29,7 @@ function App() {
   return (
     <div className ="app">
       <MainHeader isAuthenticated={isLoggedIn} onLogout={logoutHandler} />
+      <main>
       <Switch>
       <Route path="/" exact >
       <Redirect to="/welcome" />
@@ -43,6 +44,7 @@ function App() {
       <RegisterPage />
       </Route>
       </Switch>
+      </main>
     </div>
   );
 }
