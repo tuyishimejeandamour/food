@@ -34,10 +34,10 @@ main {
    background: transparent;
  }
  ::-webkit-scrollbar-thumb{
-   background: rgba(78, 78, 78, 0.5);
+   background: rgba(115, 115, 115, 0.5);
  }
  ::-webkit-scrollbar-thumb:hover{
-   background: rgb(78, 78, 78);
+   background: rgb(167, 167, 167);
  }
 
 @media(max-width:956px){

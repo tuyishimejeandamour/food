@@ -14,6 +14,16 @@ const Home = (props) => {
           <Item />
           <Item />
           <Item />
+          <Item />
+          <Item />
+          <Item />
+          <Item />
+          <Item />
+          <Item />
+          <Item />
+          <Item />
+          <Item />
+          <Item />
         </MenuContainer>
       </Flex>
       <Flex>

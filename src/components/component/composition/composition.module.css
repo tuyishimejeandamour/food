@@ -11,10 +11,12 @@
     height: 50px;
     line-height: 50px;
     margin-bottom: 10px;
+    
 }
 .flexcontainer{
     flex-direction: column;
     padding: 20px;
+    position: relative;
     /* height: calc(100% - 20px); */
 }
 
@@ -36,4 +38,11 @@
 
 .button{
     font-size: 1rem;
+}
+
+.imagePosition{
+    position: absolute;
+    z-index: 0;
+    width: calc(100% - 40px);
+    height: 61px;
 }

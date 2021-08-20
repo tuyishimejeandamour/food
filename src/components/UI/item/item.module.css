@@ -57,3 +57,8 @@ align-items: center;
     color: rgb(0 255 171);
 
 }
+.discount{
+    text-decoration: line-through;
+    margin-right: 7px;
+    color: rgba(0, 255, 170, 0.568);
+}

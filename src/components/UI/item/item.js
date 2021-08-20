@@ -17,7 +17,8 @@ const Item = (props)=>{
                  jupanese sushi food 
                 </div>
                 <div className={classes.price}>
-                  $10
+                  <span className={classes.discount}>$10</span>
+                  <span>$8</span>
                 </div>
             </div>
             <div className={classes.action}>
