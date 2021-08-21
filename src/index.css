@@ -4,7 +4,7 @@
 
 html {
   font-family: sans-serif;
-  background: linear-gradient(to right,#2b2c2c,#5C6061);
+  background: linear-gradient(116deg,#363939,#5C6061);
 }
 
 body {
@@ -43,5 +43,9 @@ main {
 @media(max-width:956px){
   main{
     padding: 13px 6px 6px 6px;
+  }
+  ::-webkit-scrollbar{
+    width: 3px;
+    /* background: transparent; */
   }
 }

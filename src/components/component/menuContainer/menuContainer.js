@@ -6,9 +6,11 @@ const MenuContainer = (props)=>{
         <div className={classes.menuContainer}>
         <img className={classes.imagepath} src={pathcon} alt="path" />
         <header className={classes.title}>
+        <button>{"< back"}</button>
         <Flex className={classes.titleflex}> 
             people like this
         </Flex>
+        <button>menu</button>
         </header>
         <div className={classes.main}>
             {props.children}

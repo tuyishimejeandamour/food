@@ -4,6 +4,8 @@ import MenuContainer from '../../component/menuContainer/menuContainer';
 import Item from '../../UI/item/item';
 import classes from './Home.module.css'
 import List from '../../UI/list/list';
+import FoodStories from '../../component/foodStories/foodStories';
+import { Route } from 'react-router-dom';
 const Home = (props) => {
   return (
     <Flex className={classes.home}>
@@ -12,9 +14,25 @@ const Home = (props) => {
       </button>
       <Flex className={classes.content}>
         <div className={classes.foodstories}>
-
+         <FoodStories></FoodStories>
         </div>
         <div className={classes.somefoods}>
+          <Item></Item>
+          <Item></Item>
+          <Item></Item>
+          <Item></Item>
+          <Item></Item>
+          <Item></Item>
+          <Item></Item>
+          <Item></Item>
+          <Item></Item>
+          <Item></Item>
+          <Item></Item>
+          <Item></Item>
+          <Item></Item>
+          <Item></Item>
+          <Item></Item>
+          <Item></Item>
           <Item></Item>
           <Item></Item>
           <Item></Item>
@@ -24,6 +42,7 @@ const Home = (props) => {
       </Flex>
       <Flex className={classes.menu}>
         <MenuContainer>
+          <Route path="/welcome" exact>
           <List>
             <div className={classes.name}>
               <span>-</span>
@@ -54,6 +73,7 @@ const Home = (props) => {
               name
             </div>
           </List>
+          </Route>
         </MenuContainer>
       </Flex>
     </Flex>

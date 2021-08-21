@@ -1,13 +1,18 @@
 .home{
   position: relative;
+  height: auto;
+  align-items: end;
 }
 .content{
+  height:auto;
   width: 65%;
   flex-direction: column;
 
 }
 
 .menu{
+  position: sticky;
+  top: 0px;
   width: 35%;
   padding: 20px;
 }
@@ -26,6 +31,8 @@
 .foodstories{
   width: 100%;
   height: 31%;
+  margin-bottom: 12px;
+  overflow: hidden ;
 }
 .somefoods{
   display: flex;
@@ -36,6 +43,8 @@
 
 .somefoods>div{
   width: 48%;
+  height: 70px;
+  margin-bottom: 10px;
 }
 
 .name{
