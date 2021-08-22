@@ -1,12 +1,20 @@
 import React from 'react';
+import { Route, useRouteMatch,NavLink } from 'react-router-dom';
 import Flex from '../../layout/flex/flexcontainer';
 import MenuContainer from '../../component/menuContainer/menuContainer';
 import Item from '../../UI/item/item';
-import classes from './Home.module.css'
 import List from '../../UI/list/list';
 import FoodStories from '../../component/foodStories/foodStories';
-import { Route } from 'react-router-dom';
+import SelectedMenu from '../../component/selectedMenu/selectedMenu';
+import classes from './Home.module.css'
 const Home = (props) => {
+   const rout = useRouteMatch()
+   let showButto = false;
+   let title = "menu";
+   if(!rout.isExact){
+     showButto = true
+     title = "soup"
+   }
   return (
     <Flex className={classes.home}>
       <button className={classes.menuHider}>
@@ -41,13 +49,15 @@ const Home = (props) => {
 
       </Flex>
       <Flex className={classes.menu}>
-        <MenuContainer>
-          <Route path="/welcome" exact>
+        <MenuContainer title={title} showButtons={showButto}>
+          <Route path={`${rout.path}`} exact>
           <List>
+            <NavLink className={classes.nava} to={`${rout.path}/soup`}>
             <div className={classes.name}>
               <span>-</span>
               soup
             </div>
+            </NavLink>
           </List>
           <List>
             <div className={classes.name}>
@@ -73,6 +83,11 @@ const Home = (props) => {
               name
             </div>
           </List>
+          </Route>
+          <Route path={`${rout.path}/:menuItem`}>
+          <div className={classes.foodstories}>
+          <SelectedMenu />
+        </div>
           </Route>
         </MenuContainer>
       </Flex>

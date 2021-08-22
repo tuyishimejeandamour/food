@@ -11,7 +11,7 @@ const Navigation = (props) => {
           <div className={classes.addcart}>
             <div className={classes.addCartMessage}>
               {/* <img src={} alt="cart" /> */}
-              <span>cart</span>
+              <span>your cart</span>
             </div>
             <div className={classes.addCartButton}>
               <button>12</button>

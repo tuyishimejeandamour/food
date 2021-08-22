@@ -17,7 +17,7 @@ const ProductView = () => {
                 </Composition>
             </Flex>
             <Flex className={`${classes.menucontainer} ${classes.all}`}>
-                <MenuContainer>
+                <MenuContainer title="people like this">
                     <Item />
                     <Item />
                     <Item />

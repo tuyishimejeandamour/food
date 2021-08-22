@@ -21,7 +21,7 @@ function App() {
   const loginHandler = (email, password) => {
     localStorage.setItem('LOGIN','1');
     setIsLoggedIn(true);
-    history.push('/welcome')
+    history.push('/home')
   };
 
   const logoutHandler = () => {
@@ -36,9 +36,9 @@ function App() {
       <main>
       <Switch>
       <Route path="/" exact >
-      <Redirect to="/welcome" />
+      <Redirect to="/home" />
       </Route>
-      <Route path='/welcome'>
+      <Route path='/home'>
         <Home />
       </Route>
       <Route path="/login">
@@ -52,6 +52,7 @@ function App() {
       </Route>
       </Switch>
       </main>
+      <footer className="footer"></footer>
     </div>
   );
 }

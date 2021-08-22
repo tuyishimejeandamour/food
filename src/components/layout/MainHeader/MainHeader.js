@@ -10,10 +10,10 @@ const MainHeader = (props) => {
   return (
     <header className={classes['main-header']}>
       <div className={classes.logodiv}>
-        <div className={classes.logoimg} onClick={()=>history.push('/welcome')}>
+        <div className={classes.logoimg} onClick={()=>history.push('/home')}>
          <img src={logo} alt="logo" />
         </div>
-      <span onClick={()=>history.push('/welcome')} >Marriot</span>
+      <span onClick={()=>history.push('/home')} >Marriot</span>
       </div>
       <div className={classes.navigation}>
       <Navigation isLoggedIn={props.isAuthenticated} onLogout={props.onLogout} />
