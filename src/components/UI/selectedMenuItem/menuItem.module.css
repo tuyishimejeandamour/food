@@ -7,6 +7,32 @@
     border-radius: 5px;
     height: 145px;
     width: 145px;
+    position: relative;
+}
+.overlap{
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    position: absolute;
+    background: #121212b3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:  ease-in .3s;
+}
+
+.overlap button{
+    border: none;
+    border-radius: 8px;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: medium;
+    line-height: 11px;
+    box-shadow: 0 3px 6px #0000008f;
 }
 
 .title{

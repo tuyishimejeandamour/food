@@ -1,12 +1,12 @@
 import React from 'react';
-import { Route, useRouteMatch,NavLink } from 'react-router-dom';
+import { Route, useRouteMatch } from 'react-router-dom';
 import Flex from '../../layout/flex/flexcontainer';
-import MenuContainer from '../../component/menuContainer/menuContainer';
+import MenuContainer from '../../layout/menuContainer/menuContainer';
 import Item from '../../UI/item/item';
-import List from '../../UI/list/list';
 import FoodStories from '../../component/foodStories/foodStories';
 import SelectedMenu from '../../component/selectedMenu/selectedMenu';
 import classes from './Home.module.css'
+import MenuList from '../../component/menuList/menulist';
 const Home = (props) => {
    const rout = useRouteMatch()
    let showButto = false;
@@ -51,41 +51,10 @@ const Home = (props) => {
       <Flex className={classes.menu}>
         <MenuContainer title={title} showButtons={showButto}>
           <Route path={`${rout.path}`} exact>
-          <List>
-            <NavLink className={classes.nava} to={`${rout.path}/soup`}>
-            <div className={classes.name}>
-              <span>-</span>
-              soup
-            </div>
-            </NavLink>
-          </List>
-          <List>
-            <div className={classes.name}>
-              <span>-</span>
-              drinks
-            </div>
-          </List>
-          <List>
-            <div className={classes.name}>
-              <span>-</span>
-              meats
-            </div>
-          </List>
-          <List>
-            <div className={classes.name}>
-              <span>-</span>
-              japanese food
-            </div>
-          </List>
-          <List>
-            <div className={classes.name}>
-              <span>-</span>
-              name
-            </div>
-          </List>
+            <MenuList />
           </Route>
           <Route path={`${rout.path}/:menuItem`}>
-          <div className={classes.foodstories}>
+          <div className={classes.foodseleceted}>
           <SelectedMenu />
         </div>
           </Route>

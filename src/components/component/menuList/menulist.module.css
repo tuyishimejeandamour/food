@@ -1,0 +1,41 @@
+.menucontent{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.menulist{
+    flex: 1;
+    overflow: auto;
+
+}
+.creates{
+    height: 105px;
+}
+.creates>div:hover{
+    background-color: rgba(114, 114, 114, 0.082);
+}
+
+.nava{
+    color: inherit;
+    text-decoration: none;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+  }
+
+  
+.name{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    
+  }
+
+  
+.name span{
+    margin-right: 3px;
+    display: block;
+    font-size: 26px;
+  }

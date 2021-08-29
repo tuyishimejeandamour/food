@@ -9,12 +9,18 @@
   flex-direction: column;
 
 }
+.foodseleceted{
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+}
 
 .menu{
   position: sticky;
   top: 0px;
   width: 35%;
   padding: 20px;
+  height: calc(100vh - 80px); 
 }
 
 .menuHider{
@@ -41,14 +47,7 @@
    width: 100%;
 }
 
-.nava{
-  color: inherit;
-  text-decoration: none;
-  width: 100%;
-  color: inherit;
-  text-decoration: none;
-  height: 100%;
-}
+
 
 .somefoods>div{
   width: 48%;
@@ -56,17 +55,6 @@
   margin-bottom: 10px;
 }
 
-.name{
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  
-}
-.name span{
-  margin-right: 3px;
-  display: block;
-  font-size: 26px;
-}
 
 @media(max-width:956px){
   .somefoods>div{

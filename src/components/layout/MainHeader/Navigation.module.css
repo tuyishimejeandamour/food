@@ -58,6 +58,9 @@
   cursor: pointer;
   box-shadow:  0 2px 4px rgb(0 0 0 / 20%);
 }
+.addCartMessage{
+  padding-left: 5px;
+}
 .addCartButton button{
   min-width: 29px;
   height: 29px;
@@ -71,5 +74,8 @@
 .addCartMessage span{
   font-size: 13px;
   font-weight: 600;
-  
+}
+
+.cartMenu{
+  width: 0;
 }

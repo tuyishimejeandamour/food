@@ -3,13 +3,14 @@ import classes from './productView.module.css'
 import Flex from '../../layout/flex/flexcontainer'
 import Composition from '../../component/composition/composition'
 import Item from '../../UI/item/item'
-import MenuContainer from '../../component/menuContainer/menuContainer'
+import MenuContainer from '../../layout/menuContainer/menuContainer'
 import ListITems from '../../component/listItems/listItems'
+import image from '../../../assets/logo.png'
 const ProductView = () => {
     return (
         <Flex>
             <Flex className={`${classes.product} ${classes.all}`}>
-                product
+                <img src={image} alt="product" />
             </Flex>
             <Flex className={`${classes.flexContainer}  ${classes.all}`} >
                 <Composition>

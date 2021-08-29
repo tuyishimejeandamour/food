@@ -6,6 +6,7 @@ import LoginPage from './components/pages/Login/Login';
 import RegisterPage from './components/pages/register/Register';
 import {Route,Redirect,Switch} from 'react-router-dom'
 import ProductView from './components/pages/productView/productView';
+import Cart from './components/pages/cart/cart';
 import { useHistory } from 'react-router-dom'
 
 function App() {
@@ -49,6 +50,9 @@ function App() {
       </Route>
       <Route path="/product/:productId">
       <ProductView />
+      </Route>
+      <Route path="/cart">
+      <Cart />
       </Route>
       </Switch>
       </main>

@@ -1,14 +1,16 @@
 import React from 'react';
 
 import classes from './Navigation.module.css';
+import { useHistory } from 'react-router-dom';
 
 const Navigation = (props) => {
+  const history = useHistory();
   return (
     <nav className={classes.nav}>
       <ul>
       {props.isLoggedIn && (
         <li>
-          <div className={classes.addcart}>
+          <div className={classes.addcart} onClick={()=>history.push('/cart')}>
             <div className={classes.addCartMessage}>
               {/* <img src={} alt="cart" /> */}
               <span>your cart</span>
@@ -16,6 +18,9 @@ const Navigation = (props) => {
             <div className={classes.addCartButton}>
               <button>12</button>
             </div>
+            </div>
+            <div className={classes.cartMenu}>
+              
             </div>
         </li>
       )}
