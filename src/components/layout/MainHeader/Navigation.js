@@ -2,6 +2,7 @@ import React from 'react';
 
 import classes from './Navigation.module.css';
 import { useHistory } from 'react-router-dom';
+import Table from '../../UI/table/table';
 
 const Navigation = (props) => {
   const history = useHistory();
@@ -20,7 +21,7 @@ const Navigation = (props) => {
             </div>
             </div>
             <div className={classes.cartMenu}>
-              
+              <Table />
             </div>
         </li>
       )}

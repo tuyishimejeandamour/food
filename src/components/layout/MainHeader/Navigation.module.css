@@ -77,5 +77,10 @@
 }
 
 .cartMenu{
-  width: 0;
+  width: 200px;
+  padding: 5px;
+  position: absolute;
+  background: #434748;
+  z-index: 2;
+  border-radius: 5px;
 }
