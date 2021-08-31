@@ -70,6 +70,9 @@
   background: linear-gradient(to top,#272727,#414444,#6e6f6f,#5D6160);;
   color: white;
 }
+.addCartButton button:hover{
+  cursor: pointer;
+}
 
 .addCartMessage span{
   font-size: 13px;
@@ -78,9 +81,14 @@
 
 .cartMenu{
   width: 200px;
+  height: 243px;
   padding: 5px;
   position: absolute;
   background: #434748;
   z-index: 2;
   border-radius: 5px;
+  box-shadow: 0 3px 5px #2d2d2dbf;
+}
+.cartMenu ::-webkit-scrollbar {
+  width: 4px;
 }

@@ -9,6 +9,7 @@
   background: linear-gradient(to right,#272727,#242727,#3A3C3D,#5D6160);
   padding: 0 2rem;
   box-shadow: 0 2px 4px rgb(0 0 0 / 26%);
+  z-index: 3;
 }
 
 

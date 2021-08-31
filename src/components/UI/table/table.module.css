@@ -1,10 +1,12 @@
 .table{
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .table .tableHeader{
+    height: 31px;
     display: flex;
     border-bottom: 1px solid rgb(114, 113, 113);
     justify-content: space-around;
@@ -12,7 +14,13 @@
 }
 
 .table .tableHeader>div{
+    text-align: center;
+    width: 33.3%;
     padding: 3px;
+}
+.table .tableHeader>div:nth-child(1),
+.table .tableHeader>div:nth-child(2){
+    border-right: 1px solid rgb(114, 113, 113);
 }
 
 .table .tableColumn{
@@ -29,4 +37,16 @@
     width: 90%;
     margin-left: 5%;
     border-bottom: 1px solid rgb(114 113 113 / 37%);
+}
+
+.table .tablebody{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.table .tablefooter{
+    width: 100%;
+    border: 1px solid rgb(0, 255, 170);
 }

@@ -1,13 +1,19 @@
 import Flex from "../../layout/flex/flexcontainer"
 import MenuContainer from "../../layout/menuContainer/menuContainer"
 import Table from "../../UI/table/table"
+import Button from "../../UI/Button/Button"
 import classes from './cart.module.css'
 const Cart = ()=>{
   const title = 'your cart'
    return (
      <Flex className={classes.cart}>
        <Flex className={classes.content}>
-         
+         <div className={classes.cartheader}>
+          <Button>order</Button>
+         </div>
+         <div className={classes.mainbody}>
+
+         </div>
  
        </Flex>
        <Flex className={classes.menu}>

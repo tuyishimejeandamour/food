@@ -12,7 +12,9 @@
 
 .button:hover,
 .button:active {
-  background: rgb(0, 255, 170);
+  transition: .3s ease-in-out;
+  background: rgba(0, 255, 170, 0.863);
+  color: white;
   border-color: rgb(0, 255, 170);
 }
 

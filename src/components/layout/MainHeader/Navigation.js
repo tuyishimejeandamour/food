@@ -1,11 +1,21 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import classes from './Navigation.module.css';
 import { useHistory } from 'react-router-dom';
 import Table from '../../UI/table/table';
 
 const Navigation = (props) => {
   const history = useHistory();
+  console.log(history.location.pathname)
+  const [showMenu,hidemenu] = useState(false);
+  const onmodleover = false
+  const hidemenuHandle = ()=>{
+    hidemenu(false)
+  }
+  const showmenuHandle = ()=>{
+    if (!history.location.pathname.includes('/cart')) {
+      hidemenu(true)
+    }
+  }
   return (
     <nav className={classes.nav}>
       <ul>
@@ -16,13 +26,15 @@ const Navigation = (props) => {
               {/* <img src={} alt="cart" /> */}
               <span>your cart</span>
             </div>
-            <div className={classes.addCartButton}>
+            <div className={classes.addCartButton} onMouseOver={showmenuHandle}>
               <button>12</button>
             </div>
             </div>
-            <div className={classes.cartMenu}>
+            {showMenu && 
+            <div className={classes.cartMenu} onMouseOver={showmenuHandle} onMouseLeave={hidemenuHandle}>
               <Table />
             </div>
+            }
         </li>
       )}
         {props.isLoggedIn && (
