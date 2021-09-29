@@ -3,6 +3,7 @@ import MenuContainer from "../../layout/menuContainer/menuContainer"
 import Table from "../../UI/table/table"
 import Button from "../../UI/Button/Button"
 import classes from './cart.module.css'
+import CartMain from "../../component/cartMain/cartMain"
 const Cart = ()=>{
   const title = 'your cart'
    return (
@@ -12,7 +13,7 @@ const Cart = ()=>{
           <Button>order</Button>
          </div>
          <div className={classes.mainbody}>
-
+           <CartMain />
          </div>
  
        </Flex>
