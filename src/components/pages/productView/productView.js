@@ -10,7 +10,10 @@ const ProductView = () => {
     return (
         <Flex>
             <Flex className={`${classes.product} ${classes.all}`}>
+                <div className={classes.productImageContainer} >
                 <img src={image} alt="product" />
+                </div>
+               
             </Flex>
             <Flex className={`${classes.flexContainer}  ${classes.all}`} >
                 <Composition>

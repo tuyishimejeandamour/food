@@ -7,7 +7,6 @@ const Navigation = (props) => {
   const history = useHistory();
   console.log(history.location.pathname)
   const [showMenu,hidemenu] = useState(false);
-  const onmodleover = false
   const hidemenuHandle = ()=>{
     hidemenu(false)
   }

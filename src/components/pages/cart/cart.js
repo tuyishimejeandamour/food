@@ -4,13 +4,22 @@ import Table from "../../UI/table/table"
 import Button from "../../UI/Button/Button"
 import classes from './cart.module.css'
 import CartMain from "../../component/cartMain/cartMain"
+import Order from "../../component/order/order"
+import { useState } from "react"
 const Cart = ()=>{
   const title = 'your cart'
+  const [orderModal, setOrderModal] = useState(false);
+  
+  const showModal = arg=>{
+    setOrderModal(arg)
+  }
    return (
+     <>
+     {orderModal&&<Order></Order>}
      <Flex className={classes.cart}>
        <Flex className={classes.content}>
          <div className={classes.cartheader}>
-          <Button>order</Button>
+          <Button onClick={ ()=>showModal(false)}>order</Button>
          </div>
          <div className={classes.mainbody}>
            <CartMain />
@@ -23,6 +32,8 @@ const Cart = ()=>{
          </MenuContainer>
        </Flex>
      </Flex>
+     </>
+     
     )
 }
 
